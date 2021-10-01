@@ -11,8 +11,7 @@ export default function CatchAll({ updatedAt }: InferGetStaticPropsType<typeof g
 export async function getStaticPaths() {
   const popularPages = [
     // The pages /foo/bar and /en-US/foo/bar will be pre-generated at build time
-    { params: { slug: ["foo", "bar"] } },
-    { params: { slug: ["en-US", "foo", "bar"] } },
+    { params: { slug: ["foo", "bar"] }, locale: 'en-us' },
   ];
   return {
     paths: popularPages,
