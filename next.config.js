@@ -7,5 +7,13 @@ module.exports = {
       'en-us',
       'fr-fr'
     ]
-  }
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/products/bar',
+        destination: '/foo/bar',
+      },
+    ]
+  },
 }
